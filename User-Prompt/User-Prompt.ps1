@@ -32,10 +32,10 @@ function user-prompt
     If($Title -eq $Null -or $Title -eq ""){$title = "Selection"}
     If($Select1 -eq $Null -or $Select1 -eq ""){$Select1 = "Yes"}
 	$selection1 = New-Object System.Management.Automation.Host.ChoiceDescription "&$Select1", `
-	$select1ToolTip
+	$selection1ToolTip
     If($Select2 -eq $Null -or $Select2 -eq ""){$Select2 = "No"}
 	$selection2 = New-Object System.Management.Automation.Host.ChoiceDescription "&$Select2", `
-	$select2ToolTip
+	$selection2ToolTip
     If($message -eq $Null -or $Message -eq ""){$message = "Basic $select1,$select2 Options"}
 	$options = [System.Management.Automation.Host.ChoiceDescription[]]($selection1, $selection2)
     $choice = $host.ui.PromptForChoice($title, $message, $options, 0)    
